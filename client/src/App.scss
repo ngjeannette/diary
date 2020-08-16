@@ -1,0 +1,260 @@
+.Main {
+    margin: 0 20px;
+
+    .content {
+        background-image: linear-gradient(141deg, #F3E6D7 0, #E6C0BF 71%, #E6C0BF 100%);
+        // background-image: linear-gradient(141deg,#E6C0BF 0,#F3E6D7 71%,#F3E6D7 100%);
+    }
+}
+
+nav {
+    margin: 10px 0;
+
+    .navbar-start {
+        display: flex;
+    }
+
+    .loggedin {
+        margin-top: 4px;
+    }
+}
+
+h1,
+h4,
+p {
+    color: rgb(54, 54, 54) !important;
+}
+
+.remove {
+    display: none !important;
+}
+
+.login,
+.createuser,
+.creatediary,
+.diary {
+
+    h1,
+    p {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 58%;
+        margin: 0 auto;
+
+        textarea {
+            resize: none;
+        }
+    }
+
+    .hero.is-fullheight {
+        min-height: calc(100vh - 60px);
+    }
+
+    .button.is-link {
+        width: 100%;
+    }
+}
+
+.creatediary {
+    .hero.is-fullheight {
+        .container {
+            height: 77vh;
+        }
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    form {
+        max-width: 100%;
+
+        input:first-child,
+        input:nth-child(2),
+        textarea {
+            margin-bottom: 10px;
+        }
+
+        input:last-child {
+            width: 108px;
+        }
+
+    }
+
+    .diary-empty {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+
+        .subtitle {
+            text-align: center;
+        }
+    }
+}
+
+.diary {
+    h1 {
+        text-align: left;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: #E6C0BF !important;
+    }
+
+    .carousel-indicators li:first-child {
+        margin-top: 4px !important;
+    }
+
+    .carousal {
+        // width: 50%;
+        // margin: 0 auto;
+    }
+
+    .hero.is-fullheight {
+        // max-height: calc(100vh - 110px);
+    }
+
+    .diary-entry-container {
+        .diary-empty {
+            h1 {
+                text-align: center;
+            }
+
+            .subtitle {
+                text-align: center;
+            }
+        }
+    }
+
+    .diary-select {
+        margin-bottom: 10px;
+
+        .select {
+            width: 100%;
+
+            select {
+                width: 100%;
+            }
+        }
+    }
+
+    .diary-entry {
+        p {
+            text-align: left;
+            margin-bottom: 10px;
+            height: 200px;
+            overflow: scroll;
+            padding: 10px;
+            background-color: #fff;
+            border-color: #dbdbdb;
+            border-radius: 4px;
+            color: #363636;
+            box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, .05);
+            max-width: 100%;
+            border: 1px solid white;
+        }
+    }
+
+    .is-loading {
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        font-size: 100px;
+    }
+}
+
+.login,
+.createuser {
+    form {
+        margin-bottom: 20px;
+    }
+
+    .notification {
+        width: fit-content;
+        margin: 0 auto;
+        height: 64px;
+
+        &.display-notification {
+            opacity: 1;
+        }
+
+        &.hide-notification {
+            opacity: 0;
+        }
+    }
+}
+
+// overwrite bulma colors
+.hero.is-primary.is-bold {
+    background-image: linear-gradient(141deg, #E6C0BF 0, #F3E6D7 71%, #F3E6D7 100%);
+}
+
+.textarea {
+    resize: none !important;
+}
+
+.subtitle,
+p {
+    color: #363636 !important;
+}
+
+// overwrite carousal 
+.w-100 {
+    height: 370px;
+    object-fit: scale-down;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+
+    &-container {
+        display: flex;
+    }
+
+    &-intro {
+        width: 64%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        p {
+            padding: 20px;
+        }
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    &-image {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// media query
+@media (max-width: 1150px) {
+    .home {
+        &-container {
+            display: block;
+            text-align: center;
+            margin: 10px;
+        }
+
+        &-intro {
+            width: 100%;
+        }
+    }
+}
